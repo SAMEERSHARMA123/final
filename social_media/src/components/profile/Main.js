@@ -90,7 +90,7 @@ export default function Main() {
     setProfile(prev => {
       const newProfile = { ...prev, ...updates };
       // Save to localStorage
-      localStorage.setItem('userProfile', JSON.stringify(newProfile));
+      // localStorage.setItem('userProfile', JSON.stringify(newProfile));
       return newProfile;
     });
   };
