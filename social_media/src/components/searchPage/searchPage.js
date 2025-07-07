@@ -25,7 +25,7 @@ const SearchPage = () => {
 useEffect(() => {
   const testQuery = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/graphql', {
+      const res = await axios.post('https://final-mpzg.onrender.com/graphql', {
         query: `
           query GetSuggestions($userId: ID!) {
             suggestedUsers(userId: $userId) {
@@ -131,7 +131,7 @@ useEffect(() => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/graphql',
+        'https://final-mpzg.onrender.com/graphql',
         { query: graphqlQuery, variables: { username: query } },
         {
           headers: { 'Content-Type': 'application/json' },
