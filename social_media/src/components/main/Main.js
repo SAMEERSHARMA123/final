@@ -51,7 +51,7 @@ const Main = () => {
         }}`;
         const variables = {  userId: tokens.id, postId : id,text : text};
 
-        const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+        const response = await axios.post("https://final-mpzg.onrender.com/graphql", { query: query, variables: variables }, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -73,7 +73,7 @@ const Main = () => {
         const query = ` mutation LikePost($userId: ID!,$postId: ID!) { LikePost(userId: $userId,postId: $postId)}`;
         const variables = {  userId: tokens.id, postId : id};
 
-        const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+        const response = await axios.post("https://final-mpzg.onrender.com/graphql", { query: query, variables: variables }, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -97,7 +97,7 @@ const Main = () => {
         const query = ` mutation DeletePost($id: ID!) { DeletePost(id: $id) }`;
         const variables = { id: id };
 
-        const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+        const response = await axios.post("https://final-mpzg.onrender.com/graphql", { query: query, variables: variables }, {
           headers: {
             'Content-Type': 'application/json'
           }
