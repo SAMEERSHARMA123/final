@@ -202,7 +202,7 @@ const resolvers = {
       delete otpStore[email];
 
       const token = user_token(user);
-      res.cookie("token", token, { httpOnly: true, secure: true, sameSite: 'None' });
+      res.cookie("token", token);
 
       return user;
     },
@@ -214,7 +214,7 @@ const resolvers = {
       if (!isMatch) throw new Error('Invalid credentials');
 
       const token = user_token(user);
-      res.cookie("token", token, { httpOnly: true, secure: true, sameSite: 'None' });
+      res.cookie("token", token);
       return user;
     },
 
