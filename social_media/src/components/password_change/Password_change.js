@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
   
 
   try {
-    const response = await axios.post('http://localhost:5000/graphql', {
+    const response = await axios.post('https://final-mpzg.onrender.com/graphql', {
       query: `
  mutation changePassword($email: String!, $oldPassword: String!, $newPassword: String!) {
   changePassword(email: $email, oldPassword: $oldPassword, newPassword: $newPassword)
