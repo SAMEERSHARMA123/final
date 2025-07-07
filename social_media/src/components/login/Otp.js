@@ -165,7 +165,7 @@ const OtpInput = () => {
           otp: parseInt(enteredOtp),
         };
         const response = await axios.post(
-          'http://localhost:5000/graphql', 
+          'https://final-mpzg.onrender.com/graphql', 
           { query, variables }, 
           { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
         );
