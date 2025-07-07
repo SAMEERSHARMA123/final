@@ -7,7 +7,7 @@ import {
 import { createUploadLink } from "apollo-upload-client";
 
 const uploadLink = createUploadLink({
-  uri: "http://localhost:5000/graphql", // ✅ your backend GraphQL URL
+  uri: "https://final-mpzg.onrender.com/graphql", // ✅ your backend GraphQL URL
   credentials: "include", // ✅ if you're using cookies
 });
 
